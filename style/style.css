@@ -1,0 +1,1792 @@
+* {
+    padding: 0;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    /* Makes width and height include padding and border */
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+
+}
+dhksfdjjjfjhdkjsfhsdkfhkjdf
+fnkjfghlkdfljgkfjdgllllllfmld;feBlendsdhdfhdhfhyhfydkjfkdfjkdlf
+dfnkf fkdfjdfk fkjgf; fdsklfhhfyfkd fhfdkfjf dujfkslkf dshf 
+dsfjkdfh fdsjkfnfu djlkekvh xjkfbu dskjjfhhd fjkdjfhfv fkjdjhfisd dsjkfhdf sdlfn 
+sd jldfj    
+
+
+
+
+:root {
+    --text-color: #f5f5f5;
+    --hover-color: #12f7ff;
+    --bg-color: #250821;
+    --secon-bg-color: #292e33;
+    --big-font: 2.5rem;
+    --normal-font: 2rem;
+    --neon-box-shadow: 0 0 0.5rem #12f7ff;
+    --h2-font: 3rem;
+    --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.3),
+        0 0 20px rgba(18, 247, 255, 0.3),
+        0 0 30px rgba(18, 247, 255, 0.3),
+        0 0 40px rgba(18, 247, 255, 0.3),
+        0 0 70px rgba(18, 247, 255, 0.3),
+        0 0 80px rgba(18, 247, 255, 0.3),
+        0 0 100px rgba(18, 247, 255, 0.3),
+        0 0 150px rgba(18, 247, 255, 0.3);
+
+}
+
+body {
+    color: #ededed;
+    background: #081b29;
+    font-family: 'poppins', sans-serif;
+
+}
+
+
+/*  ============================ this is section 1 Header =========================================  */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(42, 50, 86, 0.9);
+
+}
+
+.logo {
+    position: relative;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1.2s ease forwards;
+    animation-delay: .1s;
+    text-transform: capitalize;
+    text-shadow: 4.5px 4px 10px rgb(199, 51, 222);
+    letter-spacing: 3px;
+    font-family: "Clicker Script", cursive;
+    margin-top: -14px;
+    text-align: justify;
+
+
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 23px;
+    color: cyan;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 35px;
+    transition: 0.35s;
+    text-shadow: 3px 3px 20px rgb(16, 178, 219);
+    opacity: 0;
+    animation: slideTop .7s ease forwards;
+    animation-delay: calc(.20s * var(--i));
+
+}
+
+.navbar a:hover {
+    color: rgb(208, 196, 32);
+    text-shadow: 3px 3px 20px rgb(18, 212, 255),
+        3px 3px 50px rgb(18, 212, 255);
+
+}
+
+
+/*  =============================== this is section 2 Home ========================================  */
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 90px 7% 0 7%;
+    overflow: hidden;
+
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/bg.jpg) no-repeat center center/cover;
+    z-index: -3;
+    animation: slideLeft 1.4s ease forwards;
+    animation-delay: 0s;
+
+
+}
+
+.home>* {
+    position: relative;
+    z-index: 0;
+
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: center;
+    padding: 65px 0 40px 0;
+
+}
+
+.home-content:hover {
+    color: #141f9e;
+
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1.4s ease forwards;
+    animation-delay: .5s;
+    margin-bottom: 15px;
+
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    margin-top: 0;
+    animation: slideBottom 1.4s ease forwards;
+    animation-delay: 0.45s;
+
+}
+
+.home-content h3 span {
+    color: #0ef;
+
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1.4s ease forwards;
+    animation-delay: 0.50s;
+    margin-bottom: 15px;
+
+}
+
+.home-content h1 span {
+    font-size: 56px;
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1.4s ease forwards;
+    animation-delay: 0.30s;
+    font-weight: 510;
+    background: linear-gradient(to right, rgb(60, 110, 228), rgb(85, 192, 136));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.home-sci {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgb(253, 200, 248);
+    border: 2px solid rgb(35, 58, 209);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(32, 66, 238);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 0.99s ease;
+    opacity: 0;
+    animation: slideLeft 1.3s ease forwards;
+    animation-delay: calc(.15s * var(--i));
+
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef, 0 0 30px #0ef;
+
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 10px 28px 10px 28px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background: rgb(11, 11, 40);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #17ecff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1.4s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+    box-shadow: 1px 1px 4px #0ef, 1px 1px 15px #0ef;
+
+}
+
+.btn-box:hover {
+    color: #06173f;
+    background: #13e0eb;
+    box-shadow: 0 0 4px cyan, 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan;
+
+}
+
+.marquee {
+    margin-left: 550px;
+    width: 30%;
+    height: 40px;
+    background: none;
+    margin-left: 56.5%;
+    margin-right: 12%;
+    position: absolute;
+    bottom: 4%;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.marquee h4 {
+    text-align: center;
+    color: yellow;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+
+}
+
+
+/*  ========================== this is section 3 About, Akash Tharu ====================================  */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+   
+   
+
+}
+
+.about-img img {
+    max-width: 570px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    animation: slideTop 1.6s ease forwards;
+    animation-delay: 0.2s;
+    margin: 3% 0 0 3.4%;
+
+}
+
+
+.image-down-btn {
+    padding: 0 0 10% 10%;
+    margin-top: -4%;
+    text-align: left;
+    
+  
+
+}
+
+.about-text {
+    padding-top: 0px;
+    padding-right: 15%;
+    text-align: justify;
+    opacity: 0;
+    animation: slideTop 1.6s ease forwards;
+    animation-delay: 0.2s;
+
+}
+
+.about-text h2 {
+    font-size: 45px;
+    text-decoration: underline;
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.about-text h2 span {
+    background: linear-gradient(to right, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.about-text h4 {
+    font-size: 25px;
+    font-weight: 600px;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+
+}
+
+.about-text h4 span {
+    font-size: 25px;
+    font-weight: 600px;
+    color: #0ef;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.3;
+    padding-bottom: 1.7rem;
+    background: linear-gradient(to right, rgb(60, 110, 228), rgb(85, 192, 136));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.2s;
+
+}
+
+.paragraph-down a {
+    background: rgb(20, 29, 46);
+    animation: slideTop 2s ease forwards;
+    animation-delay: 0.2s;
+
+}
+
+
+/*  ========================= this is section 6 education, Akash Tharu =====================  */
+
+.education{
+    display: none;
+	width: 100%;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.education .main-text {
+    text-align: center;
+    margin: -20px 0 5px 0;
+
+}
+
+.education .main-text span {
+    color: rgb(62, 54, 69);
+
+}
+
+.education .main-text h2 {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: -80px;
+
+}
+
+.education .main-text h2 span {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.education .container{
+	width: 100%;
+	padding: 30px 10% 60px 10%;
+	padding-right: calc(10% - 30px);
+    display: block;
+    
+}
+.education .row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+.education .col header.title{
+	font-family: helvetica;
+	color: #1de1ff;
+	padding: 0px 0px 20px 30px;
+    font-size: 17px;
+}
+.education .col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid #bababa;
+}
+.education .col .contents .box{
+	position: relative;
+	padding: 20px;
+	border: 1px solid #180c47;
+	background-color: #0a00385d;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+}
+.education .col .contents .box:hover{
+	box-shadow: 0px 3px 12px 0px #031960;
+	border: 1px solid transparent;
+    transform: scale(1.02);
+}
+.education .col .contents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 0;
+	background-color: #67ff0f;
+	border: 2px solid white;
+}
+.education .box h4{
+	position: relative;
+	color: #65e01d;
+}
+.education .box h3, 
+.education .box h3 a{
+	font-size: 19px;
+	padding: 10px 0px 8px;
+	font-family: helvetica;
+	color: rgba(255, 205, 25, 0.745);
+    text-decoration: underline;
+}
+.education .box h3:hover, 
+.education .box h3 a:hover{
+    
+    color: #0021dd;
+}
+
+.education .box p{
+	line-height: 1.2;
+	color: #9a9797;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+/*  ============================== this is section 4 Services, Akash Tharu ================================  */
+
+.services {
+    display: none;
+    color: rgb(255, 240, 249);
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 5px 90px 60px 90px;
+    
+
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 45px;
+    padding-top: 10px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.2s;
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.2s;
+
+
+}
+
+.sub-title span {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.sub-title-up {
+    text-align: center;
+    font-size: 15px;
+    color: #08efff;
+    text-decoration: underline;
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+    animation-delay: 0.3;
+    padding: 8px 0 45px 0;
+
+}
+
+.sub-title-up .text6 {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    animation: slideTop 1.4s ease forwards;
+   
+
+}
+
+.services-list div {
+    background-color: rgb(11, 11, 40);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-radius: 20px;
+    transition: background 0.9s, transform 0.5s;
+    box-shadow: 2px 2px 20px #012290f7,
+        2px 2px 40px #033878f7;
+
+
+   
+    
+}
+
+.services-list div:hover {
+    background-color: #24084f;
+  
+
+}
+
+.services-list div i {
+    font-size: 48px;
+    margin-bottom: 22px;
+
+}
+
+.services-list div h2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #00e5ff;
+
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #12b4f4;
+    font-size: 12px;
+    margin-top: 30px;
+    display: inline-block;
+
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(11, 11, 40);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    box-shadow: 1px 1px 4px #0ef,
+        1px 1px 10px #033878f7;
+}
+
+.read:hover {
+    font-weight: 600;
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+
+}
+
+.services-down-btn {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.services-down-btn a {
+    padding: 10px 12%;
+    background: #090d32;
+    color: #00e5ff;
+    transition: background 1s, transform 1.4s;
+
+}
+
+.services-down-btn a:hover {
+    background: rgb(43, 3, 68);
+    font-weight: 600;
+    box-shadow: 0 0 1px rgb(6, 202, 216), 1px 1px 25px #0ef;
+
+}
+
+
+/*  ====================== this is section 5 portfolio project, Akash Tharu ======================  */
+
+.portfolio {
+    padding: 60px 10% 60px 10%;
+     min-height: 100vh;
+
+}
+
+.portfolio .main-text {
+    text-align: center;
+    margin: 20px 0 10px 0;
+
+}
+
+.portfolio .main-text span {
+    color: rgb(62, 54, 69);
+
+}
+
+.portfolio .main-text h2 {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: 15px;
+
+}
+
+.portfolio .main-text h2 span {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.fillter-buttons {
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.fillter-buttons .btn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2;
+    margin: 0 0.6rem;
+    color: #f5f5f5;
+    text-decoration: underline;
+
+}
+
+.fillter-buttons .btn:hover {
+    color: #12f7ff;
+
+}
+
+.fillter-buttons .btn.active {
+    color: #007bff;
+    border: 1px solid #007bff;
+
+}
+
+.portfolio .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 2rem;
+   
+
+}
+
+.portfolio .port-box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid  #12f7ff;
+    box-shadow: 0 0 0.5rem #12f7ff;
+
+}
+
+.port-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.port-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5s;
+    transition: .5s;
+
+}
+
+.port-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(15, 15, 15, 0.8), #0edfff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 3rem 2rem;
+
+}
+
+.port-box:hover .port-content {
+    opacity: 1;
+
+}
+
+.port-box:hover .port-image img {
+    transform: scale(1.1);
+
+}
+
+.port-content h3 {
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: #faea10;
+    text-decoration: underline;
+
+}
+
+.port-content p {
+    font-size: 0.8rem;
+    margin: 5px 0 15px 0;
+    color: #071341;
+    font-weight: 550;
+
+}
+
+.port-content a {
+    background: #fff;
+    border-radius: 50%; /* Ensure it's fully round */
+    display: inline-flex; /* Use inline-flex to center content */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height to match width */
+    border: 1px solid #fff; /* Optional border */
+    outline: 2px solid; /* Optional outline */
+    font-size: 1.3rem; /* Font size */
+    color: #292e33; /* Text color */
+    font-weight: 550; /* Text weight */
+    text-align: center; /* Center text */
+    line-height: 50px; /* Match line height to height for vertical centering */
+
+}
+
+
+.port-content a:hover {
+background: rgba(12, 12, 171, 0.203);
+
+
+}
+
+
+/*  ========================= this is section 7 Skills, Akash Tharu =====================  */
+
+.skills {
+    padding: 20px 180px 60px 180px;
+
+}
+
+.skills .main-text {
+    text-align: center;
+    margin: 50px 0 70px 0;
+
+}
+
+.skills .main-text span {
+    color: rgb(62, 54, 69);
+
+}
+
+.skills .main-text h2 {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: 15px;
+
+}
+
+.skills .main-text h2 span {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 100px;
+
+}
+
+/*----------------------- Technical Skills Section, left side ------------------*/
+
+.skill-right {
+    margin: 0 -25px;
+
+}
+
+.skill-bar {
+    margin-bottom: 2.3rem;
+
+}
+
+.skill-main h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: underline;
+    color: #12f7ff;
+    font-family: none;
+
+}
+
+.skill-technical .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+
+}
+
+.skill-technical .skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+
+}
+
+.skill-bar .bar span {
+    width: 50%;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    background: #12f7ff;
+    border-radius: 25px;
+    box-shadow: 0 0 .5rem #12f7ff;
+
+}
+
+.skill-bar .bar .html {
+    width: 90%;
+    animation: html 2s;
+
+}
+
+.skill-bar .bar .css {
+    width: 80%;
+    animation: css 3s;
+
+}
+
+.skill-bar .bar .javascript {
+    width: 75%;
+    animation: javascript 4s;
+
+}
+
+.skill-bar .bar .java {
+    width: 40%;
+    animation: java 5s;
+
+}
+
+/*----------------------professional Skills Section, Right side  ----------------*/
+
+.professional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.professional .box {
+    position: relative;
+    margin: 10px 0;
+    flex: 1 1 15rem;
+
+}
+
+.professional .box .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+
+}
+
+.professional .text big {
+    font: 400;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.professional .text small {
+    display: block;
+    font-weight: 600;
+
+}
+
+.professional .circle {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.professional .points {
+    width: 2px;
+    height: 10px;
+    background-color: #000000;
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i) * var(--rot))) translateY(-45px);
+
+}
+
+.points.marked {
+    animation: glow 0.06s linear forwards;
+    animation-delay: calc(var(--i) * 0.04s);
+   
+}
+
+
+/*  ============================ this is section 8 contact me , Akash Tharu ====================  */
+.contact {
+    padding: 60px 8% 60px 8%;
+
+}
+
+.contact .main-text1 h2 {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 20px 10% 0 10%;
+
+}
+
+.contact .main-text1 h2 span {
+    background: linear-gradient(to left, rgb(47, 255, 24), rgb(180, 68, 217));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 3rem;
+
+}
+
+.contact-text,
+.contact-form {
+    flex: 1;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 12px 25px;
+
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #081e2ebb;
+
+}
+
+.contact-form {
+    position: relative;
+    text-align: center;
+    font-size: 17.5px;
+    color: whitesmoke;
+    font-family: 550;
+    background: #081e2ec8;
+
+}
+
+.contact-text h4 {
+    margin: 15px 0 45px 0;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 30px;
+    text-decoration: underline;
+
+}
+
+.contact-text p {
+    color: rgb(163, 163, 163);
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 70px;
+
+}
+
+.contact-list {
+    margin-bottom: 15px;
+    color: #fff;
+
+}
+
+.contact-list a {
+    margin-bottom: 10px;
+    display: block;
+
+}
+
+.contact-list i {
+    display: inline-block;
+    color: rgb(9, 42, 255);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.contact-list a:hover {
+    color: #0ef;
+
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 5px 5px;
+
+}
+
+.contact-icons i:hover {
+    background: #0ef;
+    color: #000000c3;
+    box-shadow: 0 0 20px #0ef;
+
+}
+
+.contact-btns {
+    padding: 30px 0;
+
+}
+
+.contact-btn-box {
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgb(11, 11, 40);
+    border-radius: 40px;
+    font-size: 15px;
+    color: #17ecff;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 1px 1px 4px #0ef, 1px 1px 15px #0ef;
+
+}
+
+.contact-btn-box:hover {
+    color: #06173f;
+    background: #13e0eb;
+    box-shadow: 0 0 4px cyan, 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan;
+
+}
+
+.contact-form h4 {
+    margin: 10px 0 5px 0;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 30px;
+    text-decoration: underline;
+    text-align: left;
+
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 42px;
+    padding: 18px 25px;
+    background: rgb(200, 177, 177);
+    color: #000000cd;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+   
+}
+
+.contact-form form input:hover,
+.contact-form form textarea:hover {
+    border: 1px solid rgb(255, 0, 217);
+    outline: solid greenyellow;
+
+}
+
+.contact-form form textarea {
+    resize: none;
+    height: 200px;
+
+}
+
+.contact-form form .btns {
+    display: flex;
+    gap: 1rem;
+    margin: 20px 0;
+
+}
+
+.contact-form form .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 0;
+    background: #4c137e;
+    border-radius: 40px;
+    font-size: 15px;
+    color: #040d14b2;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.contact-form form .btn:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+        background: #4f4cad
+
+}
+ 
+
+/* ===================== this is section 9 Skills, Akash Tharu ====================  */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    background-color: #0a0e2c9f;
+    color:rgb(99, 91, 91);
+    width: 100%;
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    
+    
+}
+
+
+
+
+/*========================== this is for stars background ===================*/
+
+
+.stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+}
+
+/*------------------ Individual star styling----------------- */
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: moveStar 15s linear infinite;
+
+}
+
+
+
+/*====================================== Media Queries for Mobile, Akash Tharu ====================================================*/
+/***********************************************************************************************************************************/
+
+@media only screen and (max-width: 768px) {
+
+    
+   
+    /*********************** Media Header-1, Akash Tharu ************************/
+
+    .header {
+        width: 100%;
+        height: 68px;
+
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 38px;
+        /* Adjust this to change the size of the icon */
+
+        /* Adjust the padding around the icon */
+        margin-top: -10px;
+        padding-top: -10px;
+        margin-left: -30px;
+        /* Adjust the margin to control spacing */
+        color: #d3cde6;
+        /* Icon color */
+        cursor: pointer;
+        font-weight: 900;
+        z-index: 10;
+
+    }
+
+    .close-btn {
+        display: block;
+        font-size: 38px;
+        font-weight: 600;
+        color: #d3cde6;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 10;
+
+    }
+
+    .logo {
+        position: absolute;
+        right: 30%;
+        font-size: 33px;
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+        /* Hide navbar content by default */
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 90px;
+        padding-bottom: 25px;
+        background: rgba(4, 15, 45, 0.694);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+
+    }
+
+    .navbar.active {
+        display: flex;
+
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 20px;
+        color: rgb(3, 252, 252);
+        font-weight: bolder;
+        padding-left: 25px;
+        text-decoration: underline;
+        padding-right: 25px;
+        opacity: 0;
+        animation: slideBottom .5s ease forwards;
+        animation-delay: calc(.15s * var(--i));
+
+    }
+
+
+
+    /************************************** Media Home-2, Akash Tharu ************************************/
+
+    /*--------------for mobile view image setup-------------*/
+
+    .img-for-mobile {
+
+        margin-bottom: -180px;
+        text-align: center;
+        margin-left: -40px;
+
+    }
+
+    /****************************** Media Home-2 , Akash Tharu *************************************/
+    .home {
+        text-align: center;
+
+    }
+
+    .home::before {
+        background: none;
+
+    }
+
+    .home-content h1 span {
+        font-size: 45px;
+
+    }
+
+    .home-content h3 {
+        margin-top: 10px;
+
+    }
+
+
+    /****************************** Media About-3 , Akash Tharu *************************************/
+
+    .about {
+        display: flexbox;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        text-align: center;
+
+    }
+
+    .about-text-topic {
+        margin-left: -55%;
+
+    }
+
+    .about-text-topic h4 {
+        margin-left: -7%;
+
+    }
+
+    .image-down-btn .btn-box {
+        font-size: 12px;
+        margin-top: 25px;
+
+    }
+
+    .about-text p {
+        font-size: 14.5px;
+        margin: 0 -15px 0 -20px;
+        padding-bottom: 1rem;
+        text-align: justify;
+
+    }
+
+    .paragraph-down a {
+        margin-left: -60%;
+        font-size: 11x;
+        margin-top: 7px;
+
+    }
+
+    
+
+     /******************************** Media Services-6 , Akash Tharu *******************************/
+
+     .education{
+        padding-top: 100px;
+    }
+
+     .education.container {
+        width: 100;
+    }
+    .education .row {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /******************************** Media Services-4 , Akash Tharu *******************************/
+
+    .sub-title-up {
+        padding-bottom: 10px;
+
+    }
+
+    .services-list {
+        margin: 0 -40px;
+        text-align: center;
+
+    }
+
+    .services-down-btn {
+        padding-top: 25px;
+    }
+
+    .services-down-btn a {
+        padding: 5px 15%;
+    }
+
+   /******************************** Media Sportfolio-5 , Akash Tharu *******************************/
+    
+
+   .portfolio{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+
+    /************************************* Media Skills-7 , Akash Tharu ************************************/
+
+    .skills {
+        padding:5px 5% 50px 5%;
+        text-align: center;
+
+    }
+
+    .skill-main {
+        grid-template-columns: 2fr;
+
+    }
+
+    .skill-technical {
+        padding: 0 40px;
+    }
+
+
+    /*********************** Media Contact-8, Akash Tharu *************************************/
+
+    .contact-content {
+        display: block;
+
+
+    }
+    .contact-text {
+       margin-bottom: 40px;
+    
+    }
+    .contact-text h4 {
+   
+      text-align: center;
+    
+    }
+    .contact-form h4 {
+        padding: 5px 0 25px 0;
+       text-align: center;
+    
+    }
+
+/*********************** Media footer-9, Akash Tharu *************************************/
+
+    footer {
+        padding: 15px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+
+}   
+    /*================= out of media view more then 769px, hide content , Akash Tharu =========*/
+
+    @media (min-width: 769px) {
+        .header .close-btn {
+            display: none;
+
+        }
+
+        .hamburger {
+            display: none;
+
+        }
+
+        .img-for-mobile {
+            display: none;
+
+        }
+
+    }
+
+
+    /*================ out of media view more then 1000px, hide content , Akash Tharu ========*/
+
+    @media (max-width: 1000px) {
+
+        marquee {
+            display: none;
+
+        }
+    }
+
+
+
+    /*========================================== This is Keyframes animation , Akash Tharu ==================================*/
+    /*************************************************************************************************************************/
+
+    @keyframes slideRight {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideTop {
+        0% {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideBottom {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+
+    /*-------------------------keyframes for skills section ----------------*/
+
+    @keyframes morph {
+
+        0%,
+        100% {
+            border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+
+        }
+
+        30% {
+            border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+        }
+
+        60% {
+            border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        }
+
+        80% {
+            border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+        }
+
+    }
+
+    /*-----------------------------keyframes for technical skill------------*/
+
+    @keyframes html {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 90%;
+        }
+    }
+
+    @keyframes css {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 80%;
+        }
+    }
+
+    @keyframes javascript {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes java {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 40%;
+        }
+    }
+
+    /*--------------------------keyframes for professional skill---------*/
+
+    @keyframes glow {
+        0% {
+            background: #250821;
+            box-shadow: none;
+        }
+
+        100% {
+            background: #12f7ff;
+            box-shadow: 0 0 .7rem #12f7ff;
+        }
+    }
+
+    /*-------------------------- keyframe for Animation moving stars----------*/
+
+    @keyframes moveStar {
+        from {
+            transform: translateY(100vh);
+
+        }
+
+        from {
+            transform: translateY(10vh);
+
+        }
+
+        to {
+            transform: translateY(-10px);
+
+        }
+    }
+
+
+/*++++++++++++++++++++++++++++++++++ Website scroll animation , parallax -------- tem-not use +++++++++++++++++++
+    
+.scroll-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transform: all 2.5s;
+
+}
+
+.scroll-bottom {
+        opacity: 0;
+        transform: translateY(150px);
+        transition: 2.5s;
+    
+    }
+    
+    .scroll-top {
+        opacity: 0;
+        transform: translateY(-150px);
+        transition: 2.5s;
+    
+    }
+    
+    .show-items {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
++++++++++++++++++++++++++++++++++++++*/
+
+
+  /* -------------------------Custom Alert Styling for impest mode ------------------------- 
+.custom-alert {
+  
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #282423a9; 
+    color: rgba(120, 109, 109, 0.841);    
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+    text-align: center;
+
+  }
+  */
+
+
