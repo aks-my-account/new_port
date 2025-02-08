@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .search-bar {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search-bar input {
+      padding: 0.8rem;
+      width: min(60%, 300px);
+      border: none;
+      border-radius: 25px;
+    }
+
+    .search-bar button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-bar button:hover {
+      background-color: #2980b9;
+    }
+
+    .filter-buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+
+    }
+
+    .filter-buttons button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #3498db;
+      color: #3a1212;
+      font-weight: 500;
+      text-decoration: underline;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .filter-buttons button.active {
+      background-color: #2980b9;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Blog Post Styles */
+    .blog-post {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-title {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .post-meta {
+      color: #7f8c8d;
+      font-size: 0.9em;
+      margin-bottom: 1.5rem;
+    }
+
+    .post-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1 rem;
+    }
+
+    .post-content {
+      margin-top: 1.2rem;
+    }
+
+    .post-content h4 {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+
+    }
+
+    .more {
+      display: none;
+    }
+
+    .post-content .BtnSeeMore {
+      color: #2980b9;
+      border: none;
+      background: none;
+      font-size: 0.95rem;
+      display: inline !important;
+      /* Force inline display */
+      padding: 0;
+      margin: 0;
+      vertical-align: baseline;
+
+      text-decoration: underline;
+
+    }
+
+    .post-content .BtnSeeMore:hover {
+
+      cursor: pointer;
+      text-decoration-thickness: 1.6px;
+    }
+
+
+
+    .post-content a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .post-content a:hover {
+      text-decoration: underline;
+    }
+
+    .post-tags,
+    .post-categories {
+      margin-top: 0.3rem;
+      font-size: 0.9em;
+    }
+
+    .tag,
+    .category {
+      display: inline-block;
+      margin-right: 0.2rem;
+      padding: 0.22rem 0.9rem;
+      background-color: #ecf0f1;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #2c3e50;
+      transition: background-color 0.3s;
+    }
+
+    .tag:hover,
+    .category:hover {
+      background-color: #bdc3c7;
+    }
+
+    /* Related Posts Styles */
+    .related-posts {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .related-posts h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .related-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .related-post {
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .related-post:hover {
+      transform: translateY(-5px);
+    }
+
+    .related-post img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .related-post h4 {
+      margin: 1rem 0 0;
+      font-size: 1.1em;
+      color: #2c3e50;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #2c3e50;
+      color: #fff;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .search-bar {
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        /* Ensure items are aligned vertically */
+      }
+
+      .search-bar input {
+        width: 60%;
+        /* Adjust width as needed */
+        margin-bottom: 0;
+        /* Remove any margin-bottom */
+        flex: 1;
+        /* Allow input to grow and take available space */
+      }
+
+      .search-bar button {
+        width: auto;
+        /* Allow button to adjust its width based on content */
+        padding: 0.8rem 1rem;
+        /* Adjust padding for smaller screens */
+        flex-shrink: 0;
+        /* Prevent button from shrinking */
+      }
+
+      .filter-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.3rem;
+        padding: 0 0.5rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .filter-buttons::-webkit-scrollbar {
+        display: none;
+      }
+
+      .filter-buttons button {
+        flex: 1 1 auto;
+        min-width: max-content;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .blog-post {
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      .post-image {
+        height: 200px;
+      }
+
+      .related-posts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .related-post img {
+        height: 120px;
+      }
+
+      .related-post h4 {
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .search-bar button {
+        padding: 0.6rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Personal Blog</h1>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search posts...">
+      <button id="search-button">🔍 Search</button>
+    </div>
+    <div class="filter-buttons">
+      <button data-category="all" class="active">All</button>
+      <button data-category="html">HTML</button>
+      <button data-category="css">CSS</button>
+      <button data-category="javascript">JavaScript</button>
+      <button data-category="frameworks">Frameworks</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Blog Post 1 -->
+    <article class="blog-post" data-category="html">
+      <h2 class="post-title">Mastering HTML5: A Beginner's Guide</h2>
+      <div class="post-meta">
+        <span>By John Doe</span> | <span>October 10, 2023</span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        alt="HTML5 Code" class="post-image">
+      <div class="post-content">
+        <p>HTML5 is the backbone of modern web development<span class="dots">... </span><span class="more"> st, ultrices
+            nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non. </span><button onclick="myFunction(this)" class="BtnSeeMore">Read More</button>
+        </p>
+        <h4> Here's what you need to know:</h4>
+        <ul>
+          <li>Semantic elements like &lt;header&gt;, &lt;main&gt;, and &lt;footer&gt;</li>
+          <li>New form input types and attributes</li>
+          <li>Multimedia support with &lt;audio&gt; and &lt;video&gt;</li>
+          <li>Accessibility best practices</li>
+        </ul>
+        <p>Check out this <a href="https://www.youtube.com/watch?v=0YFrGy_mzjU" target="_blank">HTML5
+            tutorial</a> for more insights!</p>
+      </div>
+      <div class="post-tags">
+        <span>Tags:</span>
+        <a href="#" class="tag">HTML</a>
+        <a href="#" class="tag">Web Development</a>
+        <a href="#" class="tag">Beginner</a>
+      </div>
+      <div class="post-categories">
+        <span>Categories:</span>
+        <a href="#" class="category">HTML</a>
+      </div>
+    </article>
+
+    <!-- Blog Post 2 -->
+    <article class="blog-post" data-category="css">
+      <h2 class="post-title">CSS Grid vs Flexbox: When to Use Which</h2>
+      <div class="post-meta">
+        <span>By Jane Smith</span> | <span>October 12, 2023</span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        alt="CSS Grid and Flexbox" class="post-image">
+      <div class="post-content">
+        <p>Understanding the differences between CSS Grid and Flexbox:<span class="dots">... </span><span
+            class="more"> akash 2
+            nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non. </span><button onclick="myFunction(this)" class="BtnSeeMore">Read More</button>
+        </p>
+        <h4> Here's what you need to know:</h4>
+
+
+        <ul>
+          <li><strong>CSS Grid:</strong> Best for two-dimensional layouts</li>
+          <li><strong>Flexbox:</strong> Ideal for one-dimensional layouts</li>
+          <li>Use Grid for overall page structure</li>
+          <li>Use Flexbox for aligning items within components</li>
+        </ul>
+        <p>Watch this <a href="https://www.youtube.com/watch?v=9T1vfsHYiKY" target="_blank">CSS layout
+            tutorial</a> for more details!</p>
+      </div>
+      <div class="post-tags">
+        <span>Tags:</span>
+        <a href="#" class="tag">CSS</a>
+        <a href="#" class="tag">Web Design</a>
+        <a href="#" class="tag">Layouts</a>
+      </div>
+      <div class="post-categories">
+        <span>Categories:</span>
+        <a href="#" class="category">CSS</a>
+      </div>
+      
+    </article>
+
+    <!-- Blog Post 3 -->
+    <article class="blog-post" data-category="javascript">
+      <h2 class="post-title">JavaScript ES6 Features You Should Know</h2>
+      <div class="post-meta">
+        <span>By Alex Johnson</span> | <span>October 15, 2023</span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        alt="JavaScript Code" class="post-image">
+      <div class="post-content">
+        <p>Key ES6 features every developer should master:<span class="dots">... </span><span class="more"> akash3
+            nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+            non. </span><button onclick="myFunction(this)" class="BtnSeeMore">Read More</button>
+        </p>
+        <h4> Here's what you need to know:</h4>
+        <ul>
+          <li>Arrow Functions : Shorter syntax for writing functions</li>
+
+          <li>Template Literals : Easier string interpolation </li>
+
+          <li> Destructuring : Extract values from arrays or objects</li>
+        </ul>
+        <p>Start with this <a href="https://www.youtube.com/watch?v=ukzFI9rgwfU" target="_blank">ES6
+            tutorial</a>.</p>
+      </div>
+      <div class="post-tags">
+        <span>Tags:</span>
+        <a href="#" class="tag">JavaScript</a>
+        <a href="#" class="tag">ES6</a>
+        <a href="#" class="tag">Programming</a>
+      </div>
+      <div class="post-categories">
+        <span>Categories:</span>
+        <a href="#" class="category">JavaScript</a>
+      </div>
+    </article>
+
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+      <h3>You Might Also Like</h3>
+      <div class="related-posts-grid">
+        <div class="related-post">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+            alt="Web Design">
+          <h4>Modern Web Design Trends</h4>
+        </div>
+        <div class="related-post">
+          <img
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+            alt="Python Programming">
+          <h4>Python Programming Basics</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Personal Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Enhanced Search Functionality
+    document.getElementById('search-button').addEventListener('click', performSearch);
+    document.getElementById('search-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    function performSearch() {
+      const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+      if (searchQuery) {
+        const posts = document.querySelectorAll('.blog-post');
+        let found = false;
+
+        posts.forEach(post => {
+          const text = post.textContent.toLowerCase();
+          post.style.display = text.includes(searchQuery) ? 'block' : 'none';
+          if (text.includes(searchQuery)) found = true;
+        });
+
+        if (!found) {
+          alert('No matching posts found. Try different keywords.');
+        }
+      }
+    }
+
+    // Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        filterPosts(category);
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    function filterPosts(category) {
+      const posts = document.querySelectorAll('.blog-post');
+      posts.forEach(post => {
+        const postCategory = post.getAttribute('data-category');
+        if (category === 'all' || postCategory === category) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    }
+
+
+
+    // ... (keep all other JavaScript the same) ... 
+
+
+    function myFunction(button) {
+      var postContent = button.parentElement;
+      var dots = postContent.querySelector('.dots');
+      var moreText = postContent.querySelector('.more');
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        button.innerHTML = "Read More";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        button.innerHTML = " Read Less ";
+        moreText.style.display = "inline";
+      }
+    }
+
+
+    // Initialize button state on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.getElementById('BtnSeeMore');
+      btn.innerHTML = "Read More";
+    });
+
+
+  </script>
+</body>
+
+</html>
